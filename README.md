@@ -19,9 +19,9 @@ Desenvolva uma Calculadora web simples usando React que seja capaz de realizar o
    
 3. Funcionalidades dos Botões:
    
-    a. Ao clicar em um botão numérico, o valor correspondente deve ser exibido no visor.
+    a. O usuário deve  digitar os dois valores numéricos nas tags inputs.
    
-    b. Ao clicar em um botão de operação, a operação correspondente deve ser realizada.
+    b. Ao clicar em um botão de operação(+, -, /, *) , a operação correspondente deve ser realizada.
    
 4. Styled-Components:
    
