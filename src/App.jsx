@@ -13,15 +13,16 @@ const EstiloGlobal = createGlobalStyle`
 `
 
 const Body = styled.body`
-  background: #141D10;
+  background: #113946;
   height: 100vh;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
-  
+  color: white;
+
   main{
-    background: #43533D;
-    // background: #416D6D;
+    background: #BCA37F;
     height: 60vh;
     width: 30vw;
     display: flex;
@@ -29,36 +30,53 @@ const Body = styled.body`
     align-items: center;
     justify-content: space-evenly;
     color: white;
+    border-radius: 50px;
   }
+`
+
+const H2 = styled.h2`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  background-color: #F7FFE5;
+  width: 20vw;
+  height: 5vh;
+  color: black;
+`
+
+const Input = styled.section`
+  // border: 2px solid tomato;
+  width: 30vw;
+  height: 5vh;
+  display: flex;
+  justify-content: space-around;
 `
 
 const Button = styled.section`
   width: 30vw;
   height: 10vh;
-  border: 2px solid;
+  // border: 2px solid;
   display: flex;
   justify-content: space-around;
   align-items: center;
 
   button{
-    background: #243F4D;
+    background: #001524;
     width: 5vw;
     height: 5vh;
     border-radius: 15px;
     color: white;
     font-weight: bold;
+    border: none;
+    cursor: pointer;
   }
+
+  button:hover{
+    text-shadow: 0 0 3px #F4F2F3;
+}
 `
-
-
-// const Main = styled.main`
-//   background: #FFA0D9;
-//   height: 20vh;
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   justify-content: space-evenly;
-// `
 
 function App() {
 
@@ -96,16 +114,14 @@ function App() {
     <>
       <EstiloGlobal />
       <Body>
+        <h1>Calculadora</h1>
         <main>
-          <h1>Calculadora</h1>
+          <H2>{resultado}</H2>
 
-          <h2>{resultado}</h2>
-
-          <section>
+          <Input>
             <input type="number" onChange={CapturarPrimeiroValor} />
             <input type="number" onChange={CapturarSegundoValor} />
-
-          </section>
+          </Input>
 
           <Button>
             <button onClick={Soma}>+</button>
